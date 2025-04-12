@@ -94,10 +94,10 @@ namespace IKEA.BLL.Services.DepartmentServices
 
         public bool DeleteDepartment(int id)
         {
-            var department = Repository.GetById(id);
+            var Employee = Repository.GetById(id);
             int Result = 0;
-            if (department is not null)
-                Result = Repository.Delete(department);
+            if (Employee is not null)
+                Result = Repository.Delete(Employee);
             if (Result > 0)
                 return true;
             else
