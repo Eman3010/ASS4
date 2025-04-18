@@ -44,7 +44,9 @@ namespace IKEA.PL.Controllers
             }
         }
 
-        public IActionResult Edit(UpdateDepartmentDto departmentDto)
+
+        [ValidateAntiForgeryToken]
+        public IActionResult Cretae(CreateDeprtmentDto departmentDto)
         {
 
             if (!ModelState.IsValid)
